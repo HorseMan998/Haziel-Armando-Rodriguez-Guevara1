@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haziel Armando Rodríguez Guevara – Fighter</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--purple-deep:#1a0a2e;--purple-mid:#3b1f6e;--purple-vivid:#6c3fc5;--purple-light:#9b6fe8;--purple-pale:#c9aff5;--silver:#c8c8d4;--white:#f8f7ff;--gold-accent:#d4af7a;--text-body:#d0cce8;--text-dim:#8a85a8}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--purple-deep);color:var(--text-body);font-family:"DM Sans",sans-serif;font-weight:300;line-height:1.75;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(20,8,40,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(108,63,197,.3);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:"Cormorant Garamond",serif;font-size:1.1rem;font-weight:600;color:var(--purple-pale);letter-spacing:.04em;white-space:nowrap}
+.nav-links{display:flex;gap:.2rem;list-style:none;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{display:block;padding:.35rem .65rem;font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--silver);text-decoration:none;border-radius:3px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--white);background:rgba(108,63,197,.3)}
+#home{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem 4rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(108,63,197,.35) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(59,31,110,.5) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 80% 70%,rgba(155,111,232,.2) 0%,transparent 60%)}
+.hero-content{position:relative;z-index:2;max-width:720px}
+.hero-eyebrow{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--purple-light);margin-bottom:1.2rem;animation:fadeUp .8s ease both}
+.hero-name{font-family:"Cormorant Garamond",serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:700;line-height:1.05;color:var(--white);letter-spacing:-.01em;animation:fadeUp .9s .1s ease both}
+.hero-name span{color:var(--purple-light)}
+.hero-title{font-family:"Cormorant Garamond",serif;font-size:clamp(1.1rem,3vw,1.7rem);font-style:italic;font-weight:300;color:var(--gold-accent);margin-top:.5rem;margin-bottom:2rem;letter-spacing:.06em;animation:fadeUp 1s .2s ease both}
+.hero-quote{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,5vw,3.5rem);font-style:italic;font-weight:300;color:var(--purple-pale);margin-bottom:2.5rem;animation:fadeUp 1s .3s ease both}
+.hero-quote::before{content:'\201C';opacity:.5}
+.hero-quote::after{content:'\201D';opacity:.5}
+.hero-intro{font-size:1.05rem;max-width:560px;margin:0 auto 3rem;color:var(--text-body);line-height:1.85;animation:fadeUp 1s .4s ease both}
+.hero-photos{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 1s .5s ease both}
+.photo-frame{position:relative;overflow:hidden;border:1px solid rgba(155,111,232,.4);border-radius:4px}
+.photo-frame::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(108,63,197,.15) 0%,transparent 60%);z-index:1;pointer-events:none}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.frame-portrait{width:220px;height:290px}
+.frame-symbol{width:220px;height:190px}
+.frame-landscape{width:260px;height:200px}
+.frame-square{width:200px;height:200px}
+.frame-wide{width:340px;height:220px}
+section{padding:7rem 2rem;position:relative}
+section:nth-child(even){background:rgba(59,31,110,.12)}
+.section-inner{max-width:860px;margin:0 auto}
+.chapter-tag{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--purple-light);margin-bottom:.75rem;display:flex;align-items:center;gap:.75rem}
+.chapter-tag::before{content:"";display:block;width:32px;height:1px;background:var(--purple-vivid)}
+h2.section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:2rem;letter-spacing:-.01em}
+h2.section-title em{color:var(--purple-light);font-style:italic}
+.grammar-badge{display:inline-block;padding:.25rem .75rem;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(155,111,232,.5);border-radius:100px;color:var(--purple-pale);margin-bottom:1.5rem}
+p.body-text{font-size:1rem;line-height:1.9;color:var(--text-body);margin-bottom:1.2rem;max-width:700px}
+.photos-row{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:3rem}
+.ornamental-divider{display:flex;align-items:center;gap:1rem;margin:3rem 0}
+.ornamental-divider span{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(108,63,197,.5),transparent)}
+.ornamental-divider::before{content:"✦";color:var(--purple-vivid);font-size:.7rem}
+#reflection{background:linear-gradient(160deg,rgba(59,31,110,.4) 0%,rgba(26,10,46,.8) 100%);border-top:1px solid rgba(108,63,197,.3);border-bottom:1px solid rgba(108,63,197,.3)}
+.reflection-quote{font-family:"Cormorant Garamond",serif;font-size:clamp(1.4rem,3vw,2.1rem);font-style:italic;font-weight:300;color:var(--purple-pale);border-left:3px solid var(--purple-vivid);padding-left:1.5rem;margin:2rem 0;line-height:1.5}
+#gallery{background:rgba(59,31,110,.08)}
+.gallery-filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+.filter-btn{padding:.35rem .9rem;font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(155,111,232,.4);border-radius:100px;background:transparent;color:var(--purple-pale);cursor:pointer;transition:all .2s}
+.filter-btn:hover,.filter-btn.active{background:var(--purple-vivid);border-color:var(--purple-vivid);color:var(--white)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.gallery-item{border-radius:6px;overflow:hidden;border:1px solid rgba(155,111,232,.25);transition:transform .3s ease,box-shadow .3s ease;cursor:pointer}
+.gallery-item:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(108,63,197,.4)}
+.gallery-item.hidden{display:none}
+.gallery-img-wrap{position:relative;aspect-ratio:4/3;overflow:hidden}
+.gallery-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.gallery-item:hover .gallery-img-wrap img{transform:scale(1.06)}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,10,46,.9) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:1rem;opacity:0;transition:opacity .3s}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-caption{font-size:.85rem;color:var(--white);font-weight:500;line-height:1.3}
+.gallery-chapter{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--purple-light);margin-top:.25rem}
+.lightbox{display:none;position:fixed;inset:0;z-index:9999;background:rgba(10,4,20,.96);backdrop-filter:blur(12px);align-items:center;justify-content:center}
+.lightbox.open{display:flex}
+.lb-content{max-width:90vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.lb-content img{max-width:90vw;max-height:78vh;object-fit:contain;border-radius:6px;border:1px solid rgba(155,111,232,.3);box-shadow:0 0 60px rgba(108,63,197,.3)}
+.lb-info{display:flex;flex-direction:column;align-items:center;gap:.25rem;text-align:center}
+#lb-caption{font-family:"Cormorant Garamond",serif;font-size:1.1rem;color:var(--white);font-style:italic}
+#lb-chapter{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--purple-light)}
+.lb-close{position:fixed;top:1.5rem;right:1.5rem;background:rgba(108,63,197,.3);border:1px solid rgba(155,111,232,.4);color:var(--white);font-size:1.1rem;width:40px;height:40px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lb-close:hover{background:var(--purple-vivid)}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(108,63,197,.3);border:1px solid rgba(155,111,232,.4);color:var(--white);font-size:1.3rem;width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lb-nav:hover{background:var(--purple-vivid)}
+.lb-prev{left:1.5rem}
+.lb-next{right:1.5rem}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:var(--text-dim);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;z-index:2;animation:bounce 2s infinite}
+footer{background:rgba(10,4,20,.95);border-top:1px solid rgba(108,63,197,.25);text-align:center;padding:3rem 2rem}
+footer .footer-name{font-family:"Cormorant Garamond",serif;font-size:1.4rem;color:var(--purple-pale);letter-spacing:.06em}
+footer .footer-sub{font-size:.75rem;color:var(--text-dim);margin-top:.5rem;letter-spacing:.12em;text-transform:uppercase}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:600px){.nav-links{display:none}.photos-row{justify-content:center}.frame-portrait,.frame-symbol,.frame-landscape,.frame-square,.frame-wide{width:160px;height:200px}.gallery-grid{grid-template-columns:repeat(2,1fr)}.lb-nav{width:36px;height:36px;font-size:1rem}.lb-prev{left:.5rem}.lb-next{right:.5rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">H.A.R.G.</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#ch1">Early Life</a></li>
+    <li><a href="#ch2">Challenges</a></li>
+    <li><a href="#ch3">Achievements</a></li>
+    <li><a href="#ch4">Who I Am</a></li>
+    <li><a href="#ch5">Future</a></li>
+    <li><a href="#reflection">Reflection</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Autobiography</p>
+    <h1 class="hero-name">Haziel Armando<br><span>Rodríguez Guevara</span></h1>
+    <p class="hero-title">— Fighter —</p>
+    <p class="hero-quote">What if</p>
+    <p class="hero-intro">I am a resilient and proactive man who sets high standards and pursues ambitious dreams. This is my story — written in courage, shaped by struggle, and lit by an unrelenting vision of what could be.</p>
+    <div class="hero-photos">
+      <div class="photo-frame frame-portrait"><img src="cumple.jpeg" alt="Birthday celebration"></div>
+      <div class="photo-frame frame-symbol"><img src="man_getting_rock.webp" alt="Never stop pushing"></div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <svg width="12" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 12 16"><path d="M6 1v14M1 10l5 5 5-5"/></svg>
+    Scroll
+  </div>
+</section>
+
+<section id="ch1">
+  <div class="section-inner">
+    <p class="chapter-tag reveal">Chapter I</p>
+    <h2 class="section-title reveal">Early <em>Life</em></h2>
+    <span class="grammar-badge reveal">Grammar Focus · Simple Past &amp; Past Continuous</span>
+    <p class="body-text reveal">I grew up in Cananea, Sonora, although I was born in Parral, Chihuahua. My childhood was filled with moments that shaped my understanding of life. Some of my most vivid memories were seeing my parents cry and witnessing the day my sister was born — moments that taught me empathy and emotional strength.</p>
+    <p class="body-text reveal">My father had lived his entire life in Cananea, surrounded by his family and the mining culture that defined the town. My mother came from a small village in Chihuahua with barely a hundred people. After finishing her studies, she moved to Cananea to work at the mine, where she met my father.</p>
+    <p class="body-text reveal">While I was learning about the world around me, I discovered that my parents were not superheroes or machines that could do everything. They were human beings with emotions, fears, and limitations. That realization was confusing at first, but it made me feel closer to them.</p>
+    <div class="ornamental-divider"><span></span></div>
+    <div class="photos-row reveal">
+      <div class="photo-frame frame-square"><img src="foto_bb1.jpeg" alt="Childhood photo"></div>
+      <div class="photo-frame frame-square"><img src="ama.jpeg" alt="With my mother"></div>
+    </div>
+  </div>
+</section>
+
+<section id="ch2">
+  <div class="section-inner">
+    <p class="chapter-tag reveal">Chapter II</p>
+    <h2 class="section-title reveal">Challenges <em>&amp; Lessons</em></h2>
+    <span class="grammar-badge reveal">Grammar Focus · Past Perfect &amp; Third Conditional</span>
+    <p class="body-text reveal">One of the most miserable experiences I had ever faced was undergoing surgery. I had to stay in the hospital for about a week, surrounded by elderly and hopeless patients whose pain made me deeply melancholic. I had never felt such vulnerability before, and that moment changed my perspective on health and gratitude.</p>
+    <p class="body-text reveal">I had faced many obstacles in my life, but the most challenging ones were preparing for a volleyball tournament and playing while feeling nervous and unconfident. If I had given up, I would not have learned the importance of resilience and self-belief.</p>
+    <p class="body-text reveal">From those experiences, I had learned that perseverance and authenticity always lead to results. I had realized that every difficulty carried a lesson — one that shaped my character and strengthened my will.</p>
+    <div class="reflection-quote reveal">"If I had given up, I would not have learned the importance of resilience and self-belief."</div>
+    <div class="photos-row reveal">
+      <div class="photo-frame frame-landscape"><img src="hospital.webp" alt="Hospital ward"></div>
+      <div class="photo-frame frame-landscape"><img src="logro_trackmeet.jpeg" alt="Track meet challenge"></div>
+    </div>
+  </div>
+</section>
+
+<section id="ch3">
+  <div class="section-inner">
+    <p class="chapter-tag reveal">Chapter III</p>
+    <h2 class="section-title reveal"><em>Achievements</em></h2>
+    <span class="grammar-badge reveal">Grammar Focus · Present Perfect &amp; Present Perfect Continuous</span>
+    <p class="body-text reveal">I have achieved a final average of 97 from my first to fifth semester, failing only one subject. That accomplishment has proven my dedication and consistency.</p>
+    <p class="body-text reveal">I have also been proud to serve as the captain of both the volleyball team and the track meets at INSON and Minerva. Leadership has taught me patience, communication, and courage.</p>
+    <p class="body-text reveal">Being a leader has never been easy, but I have been working on it continuously. I have learned how to manage people, stay calm even when frustrated, and be an example to others.</p>
+    <div class="ornamental-divider"><span></span></div>
+    <div class="photos-row reveal">
+      <div class="photo-frame frame-wide"><img src="leader.jpeg" alt="Leading the team"></div>
+      <div class="photo-frame frame-wide"><img src="eso.jpeg" alt="Team spirit at track meet"></div>
+    </div>
+  </div>
+</section>
+
+<section id="ch4">
+  <div class="section-inner">
+    <p class="chapter-tag reveal">Chapter IV</p>
+    <h2 class="section-title reveal">Who I Am <em>Today</em></h2>
+    <span class="grammar-badge reveal">Grammar Focus · Relative Clauses</span>
+    <p class="body-text reveal">I am a disciplined and proactive person who enjoys helping others. I have many friends but only a few brothers — people whose loyalty and honesty I deeply value. I am someone who rarely keeps things to myself and who expresses truth with confidence.</p>
+    <p class="body-text reveal">The values that define me are character, honor, and discipline, which are the pillars that guide my decisions. With those three qualities, I am sure I will achieve anything I set my mind to.</p>
+    <p class="body-text reveal">My strengths include honesty, mental toughness, and adaptability. I am the kind of person who remains calm in harsh situations and who inspires others to do the same.</p>
+    <div class="ornamental-divider"><span></span></div>
+    <div class="photos-row reveal">
+      <div class="photo-frame frame-square"><img src="amigos.jpeg" alt="With friends"></div>
+      <div class="photo-frame frame-square"><img src="discipline.jpg" alt="Discipline"></div>
+    </div>
+  </div>
+</section>
+
+<section id="ch5">
+  <div class="section-inner">
+    <p class="chapter-tag reveal">Chapter V</p>
+    <h2 class="section-title reveal">My Future <em>Vision</em></h2>
+    <span class="grammar-badge reveal">Grammar Focus · Future Forms</span>
+    <p class="body-text reveal">My goals are clear: I am going to start trading and become efficient at it, finish my career, and work abroad — perhaps in the United States or China. I will buy a car before graduating and, in about twelve years, create a family built on love and discipline.</p>
+    <p class="body-text reveal">My dreams have always been ambitious. I am going to get a BMW, complete a marathon, climb a mountain, and finish an IronMan competition.</p>
+    <p class="body-text reveal">I will not aim to be the best student only in grades but the best at understanding subjects, connecting with people, and securing a job as soon as I graduate. I am determined to keep growing and to pursue excellence wherever life takes me.</p>
+    <div class="ornamental-divider"><span></span></div>
+    <div class="photos-row reveal">
+      <div class="photo-frame frame-landscape"><img src="engineering.jpg" alt="Engineering career"></div>
+      <div class="photo-frame frame-landscape"><img src="bmw.webp" alt="Dream BMW"></div>
+    </div>
+  </div>
+</section>
+
+<section id="reflection">
+  <div class="section-inner">
+    <p class="chapter-tag reveal">Reflection</p>
+    <h2 class="section-title reveal">What Life Has <em>Taught Me</em></h2>
+    <span class="grammar-badge reveal">Grammar Focus · Modal Perfects</span>
+    <p class="body-text reveal">Life has taught me how to accomplish anything I truly desire. If I had asked her for patience, she would have given me problems to test my endurance. If I had asked for toughness, she would have given me harsh times to strengthen my spirit.</p>
+    <div class="reflection-quote reveal">"I might have felt lost at moments, but those experiences could have been the lessons I needed to evolve."</div>
+    <p class="body-text reveal">I should have appreciated every challenge sooner, because each one carried wisdom disguised as pain. I might have felt lost at moments, but those experiences could have been the very lessons I needed to evolve and rise.</p>
+    <p class="body-text reveal">The greatest lesson I have learned is to love myself, never give up, and always be there for the people I love. Life has shown me that growth often comes through struggle, and that every hardship is a gift in disguise.</p>
+    <div class="ornamental-divider"><span></span></div>
+    <div class="photos-row reveal">
+      <div class="photo-frame frame-square"><img src="motivation.webp" alt="Wake up and grind"></div>
+      <div class="photo-frame frame-square"><img src="abjea.jpeg" alt="Where it all began"></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="section-inner">
+    <p class="chapter-tag reveal">Gallery</p>
+    <h2 class="section-title reveal">A Life in <em>Photos</em></h2>
+    <p class="body-text reveal">Every image tells a chapter of the story — from the earliest days to the dreams still ahead.</p>
+    <div class="gallery-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Home">Home</button>
+      <button class="filter-btn" data-filter="Early Life">Early Life</button>
+      <button class="filter-btn" data-filter="Challenges">Challenges</button>
+      <button class="filter-btn" data-filter="Achievements">Achievements</button>
+      <button class="filter-btn" data-filter="Who I Am Today">Who I Am</button>
+      <button class="filter-btn" data-filter="Future Vision">Future</button>
+      <button class="filter-btn" data-filter="Reflection">Reflection</button>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item" data-chapter="Home"><div class="gallery-img-wrap"><img src="cumple.jpeg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Birthday celebration</span><span class="gallery-chapter">Home</span></div></div></div>
+      <div class="gallery-item" data-chapter="Home"><div class="gallery-img-wrap"><img src="man_getting_rock.webp" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Never stop pushing</span><span class="gallery-chapter">Home</span></div></div></div>
+      <div class="gallery-item" data-chapter="Early Life"><div class="gallery-img-wrap"><img src="foto_bb1.jpeg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Childhood days</span><span class="gallery-chapter">Early Life</span></div></div></div>
+      <div class="gallery-item" data-chapter="Early Life"><div class="gallery-img-wrap"><img src="ama.jpeg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">With my mother</span><span class="gallery-chapter">Early Life</span></div></div></div>
+      <div class="gallery-item" data-chapter="Challenges"><div class="gallery-img-wrap"><img src="hospital.webp" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Surgery — a lesson in gratitude</span><span class="gallery-chapter">Challenges</span></div></div></div>
+      <div class="gallery-item" data-chapter="Challenges"><div class="gallery-img-wrap"><img src="logro_trackmeet.jpeg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Track meet — facing the challenge</span><span class="gallery-chapter">Challenges</span></div></div></div>
+      <div class="gallery-item" data-chapter="Achievements"><div class="gallery-img-wrap"><img src="leader.jpeg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Leading the team</span><span class="gallery-chapter">Achievements</span></div></div></div>
+      <div class="gallery-item" data-chapter="Achievements"><div class="gallery-img-wrap"><img src="eso.jpeg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Team spirit at the track meet</span><span class="gallery-chapter">Achievements</span></div></div></div>
+      <div class="gallery-item" data-chapter="Who I Am Today"><div class="gallery-img-wrap"><img src="amigos.jpeg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">My people</span><span class="gallery-chapter">Who I Am Today</span></div></div></div>
+      <div class="gallery-item" data-chapter="Who I Am Today"><div class="gallery-img-wrap"><img src="discipline.jpg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Discipline is everything</span><span class="gallery-chapter">Who I Am Today</span></div></div></div>
+      <div class="gallery-item" data-chapter="Future Vision"><div class="gallery-img-wrap"><img src="engineering.jpg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Engineering — the career path</span><span class="gallery-chapter">Future Vision</span></div></div></div>
+      <div class="gallery-item" data-chapter="Future Vision"><div class="gallery-img-wrap"><img src="bmw.webp" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">The dream car</span><span class="gallery-chapter">Future Vision</span></div></div></div>
+      <div class="gallery-item" data-chapter="Reflection"><div class="gallery-img-wrap"><img src="motivation.webp" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Wake up &amp; grind</span><span class="gallery-chapter">Reflection</span></div></div></div>
+      <div class="gallery-item" data-chapter="Reflection"><div class="gallery-img-wrap"><img src="abjea.jpeg" alt="" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Where it all began</span><span class="gallery-chapter">Reflection</span></div></div></div>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lb-close">&#10005;</button>
+    <button class="lb-nav lb-prev" id="lb-prev">&#8592;</button>
+    <button class="lb-nav lb-next" id="lb-next">&#8594;</button>
+    <div class="lb-content">
+      <img id="lb-img" src="" alt="">
+      <div class="lb-info"><span id="lb-caption"></span><span id="lb-chapter"></span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="footer-name">Haziel Armando Rodríguez Guevara</p>
+  <p class="footer-sub">Fighter &nbsp;·&nbsp; "What if" &nbsp;·&nbsp; Autobiography</p>
+</footer>
+
+<script>
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const s=Array.from(e.target.parentElement.querySelectorAll(".reveal"));setTimeout(()=>e.target.classList.add("visible"),s.indexOf(e.target)*80);observer.unobserve(e.target)}})},{threshold:.12});
+reveals.forEach(r=>observer.observe(r));
+
+const filterBtns=document.querySelectorAll(".filter-btn");
+const galleryItems=document.querySelectorAll(".gallery-item");
+filterBtns.forEach(btn=>{btn.addEventListener("click",()=>{filterBtns.forEach(b=>b.classList.remove("active"));btn.classList.add("active");const f=btn.dataset.filter;galleryItems.forEach(item=>{item.classList.toggle("hidden",f!=="all"&&item.dataset.chapter!==f)})})});
+
+const lightbox=document.getElementById("lightbox");
+const lbImg=document.getElementById("lb-img");
+const lbCaption=document.getElementById("lb-caption");
+const lbChapter=document.getElementById("lb-chapter");
+let cur=0,vis=[];
+function show(i){const item=vis[i];lbImg.src=item.querySelector("img").src;lbCaption.textContent=item.querySelector(".gallery-caption").textContent;lbChapter.textContent=item.querySelector(".gallery-chapter").textContent}
+function open(i){vis=Array.from(galleryItems).filter(it=>!it.classList.contains("hidden"));cur=i;show(cur);lightbox.classList.add("open");document.body.style.overflow="hidden"}
+function close(){lightbox.classList.remove("open");document.body.style.overflow=""}
+galleryItems.forEach(item=>item.addEventListener("click",()=>{const v=Array.from(galleryItems).filter(it=>!it.classList.contains("hidden"));open(v.indexOf(item))}));
+document.getElementById("lb-close").addEventListener("click",close);
+document.getElementById("lb-prev").addEventListener("click",()=>{cur=(cur-1+vis.length)%vis.length;show(cur)});
+document.getElementById("lb-next").addEventListener("click",()=>{cur=(cur+1)%vis.length;show(cur)});
+lightbox.addEventListener("click",e=>{if(e.target===lightbox)close()});
+document.addEventListener("keydown",e=>{if(!lightbox.classList.contains("open"))return;if(e.key==="Escape")close();if(e.key==="ArrowLeft"){cur=(cur-1+vis.length)%vis.length;show(cur)}if(e.key==="ArrowRight"){cur=(cur+1)%vis.length;show(cur)}});
+</script>
+</body>
+</html>
